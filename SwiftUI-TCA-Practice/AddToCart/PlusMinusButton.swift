@@ -4,42 +4,17 @@
 //
 //  Created by 金峻聖 on 2023/03/28.
 //
-
 import SwiftUI
 import ComposableArchitecture
 
-struct State: Equatable {
-    var counter = 0
-}
-
-enum Action: Equatable {
-    case increaseCounter
-    case decreaseCounter
-}
-
-struct Environment {
-    // Feature Dependencies..
-}
-
-let reducer = AnyReducer<State, Action, Environment> { state, action, environment in
-    switch action {
-    case .increaseCounter:
-        state.counter += 1
-        return .none
-    case .decreaseCounter:
-        state.counter -= 1
-        return .none
-    }
-}
-
-struct ContentView: View {
-    let store: Store<State, Action>
+struct PlusMinusButton: View {
+    let store: Store<AddToCartDomain.State, AddToCartDomain.Action>
     
     var body: some View {
         WithViewStore(self.store) { viewStore in
             HStack {
                 Button {
-                    viewStore.send(.decreaseCounter)
+                    viewStore.send(.didTapMinusButton)
                 } label: {
                     Text("-")
                         .padding(10)
@@ -53,7 +28,7 @@ struct ContentView: View {
                     .padding(5)
                 
                 Button {
-                    viewStore.send(.increaseCounter)
+                    viewStore.send(.didTapPlusButton)
                 } label: {
                     Text("+")
                         .padding(10)
@@ -67,13 +42,13 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct PlusMinusButton_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(
+        PlusMinusButton(
             store: Store(
-                initialState: State(),
-                reducer: reducer,
-                environment: Environment()
+                initialState: AddToCartDomain.State(),
+                reducer: AddToCartDomain.reducer,
+                environment: AddToCartDomain.Environment()
             )
         )
     }

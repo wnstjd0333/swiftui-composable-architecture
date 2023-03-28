@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		F7D2BA2929D3132A00044324 /* SwiftUI_TCA_PracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D2BA2829D3132A00044324 /* SwiftUI_TCA_PracticeApp.swift */; };
-		F7D2BA2B29D3132A00044324 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D2BA2A29D3132A00044324 /* ContentView.swift */; };
+		F7D2BA2B29D3132A00044324 /* PlusMinusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D2BA2A29D3132A00044324 /* PlusMinusButton.swift */; };
 		F7D2BA2D29D3132B00044324 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7D2BA2C29D3132B00044324 /* Assets.xcassets */; };
 		F7D2BA3129D3132B00044324 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7D2BA3029D3132B00044324 /* Preview Assets.xcassets */; };
 		F7D2BA5429D317B300044324 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = F7D2BA5329D317B300044324 /* ComposableArchitecture */; };
+		F7D2BA5729D3209100044324 /* AddToCartDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D2BA5629D3209100044324 /* AddToCartDomain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F7D2BA2529D3132A00044324 /* SwiftUI-TCA-Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-TCA-Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D2BA2829D3132A00044324 /* SwiftUI_TCA_PracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_TCA_PracticeApp.swift; sourceTree = "<group>"; };
-		F7D2BA2A29D3132A00044324 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F7D2BA2A29D3132A00044324 /* PlusMinusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusMinusButton.swift; sourceTree = "<group>"; };
 		F7D2BA2C29D3132B00044324 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7D2BA2E29D3132B00044324 /* SwiftUI_TCA_Practice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUI_TCA_Practice.entitlements; sourceTree = "<group>"; };
 		F7D2BA3029D3132B00044324 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F7D2BA5629D3209100044324 /* AddToCartDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartDomain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				F7D2BA2829D3132A00044324 /* SwiftUI_TCA_PracticeApp.swift */,
-				F7D2BA2A29D3132A00044324 /* ContentView.swift */,
+				F7D2BA5529D3206D00044324 /* AddToCart */,
 				F7D2BA2C29D3132B00044324 /* Assets.xcassets */,
 				F7D2BA2E29D3132B00044324 /* SwiftUI_TCA_Practice.entitlements */,
 				F7D2BA2F29D3132B00044324 /* Preview Content */,
@@ -69,6 +71,15 @@
 				F7D2BA3029D3132B00044324 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F7D2BA5529D3206D00044324 /* AddToCart */ = {
+			isa = PBXGroup;
+			children = (
+				F7D2BA5629D3209100044324 /* AddToCartDomain.swift */,
+				F7D2BA2A29D3132A00044324 /* PlusMinusButton.swift */,
+			);
+			path = AddToCart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +158,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7D2BA2B29D3132A00044324 /* ContentView.swift in Sources */,
+				F7D2BA5729D3209100044324 /* AddToCartDomain.swift in Sources */,
+				F7D2BA2B29D3132A00044324 /* PlusMinusButton.swift in Sources */,
 				F7D2BA2929D3132A00044324 /* SwiftUI_TCA_PracticeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

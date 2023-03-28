@@ -9,12 +9,16 @@ import SwiftUI
 import ComposableArchitecture
 
 @main
-struct SwiftUI_TCA_PracticeApp: App {
-    let store = Store(initialState: State(), reducer: reducer, environment: Environment())
-    
+struct SwiftUI_TCA_PracticeApp: App {    
     var body: some Scene {
         WindowGroup {
-            ContentView(store: store)
+            PlusMinusButton(
+                store: Store(
+                    initialState: AddToCartDomain.State(),
+                    reducer: AddToCartDomain.reducer,
+                    environment: AddToCartDomain.Environment()
+                )
+            )
         }
     }
 }
