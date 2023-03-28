@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct SwiftUI_TCA_PracticeApp: App {
+    let store = Store(initialState: State(), reducer: reducer, environment: Environment())
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(store: store)
         }
     }
 }
