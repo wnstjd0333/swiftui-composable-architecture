@@ -13,17 +13,37 @@ struct ProductListView: View {
     
     var body: some View {
         WithViewStore(self.store) { viewStore in
-            List {
-                ForEachStore(
-                    self.store.scope(
-                        state: \.productList,
-                        action: ProductListDomain.Action.product(id:action:))
-                ) {
-                    ProductCell(store: $0)
+            NavigationStack {
+                List {
+                    ForEachStore(
+                        self.store.scope(
+                            state: \.productList,
+                            action: ProductListDomain.Action.product(id:action:))
+                    ) {
+                        ProductCell(store: $0)
+                    }
                 }
-            }
-            .task {
-                viewStore.send(.fetchProducts)
+                .task {
+                    viewStore.send(.fetchProducts)
+                }
+                .navigationTitle("Products")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            viewStore.send(.setCart(isPresented: true))
+                        } label: {
+                            Text("Go to Cart")
+                        }
+                    }
+                }
+                .sheet(
+                    isPresented: viewStore.binding(
+                        get: \.shouldOpenCart,
+                        send: ProductListDomain.Action.setCart(isPresented:)
+                    )
+                ) {
+                    CartListView()
+                }
             }
         }
     }
