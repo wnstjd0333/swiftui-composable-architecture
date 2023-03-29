@@ -19,6 +19,7 @@
 		F7D2BA6029D3F68900044324 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D2BA5F29D3F68900044324 /* ProductCell.swift */; };
 		F7D2BA6329D4180A00044324 /* ProductListDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D2BA6229D4180A00044324 /* ProductListDomain.swift */; };
 		F7D2BA6529D420E300044324 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D2BA6429D420E300044324 /* ProductListView.swift */; };
+		F7D2BA6829D4252000044324 /* CartListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D2BA6729D4252000044324 /* CartListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		F7D2BA5F29D3F68900044324 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		F7D2BA6229D4180A00044324 /* ProductListDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListDomain.swift; sourceTree = "<group>"; };
 		F7D2BA6429D420E300044324 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
+		F7D2BA6729D4252000044324 /* CartListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				F7D2BA2829D3132A00044324 /* SwiftUI_TCA_PracticeApp.swift */,
+				F7D2BA6629D4250100044324 /* CartList */,
 				F7D2BA6129D417F800044324 /* ProductList */,
 				F7D2BA5A29D3E1B300044324 /* Product */,
 				F7D2BA5529D3206D00044324 /* AddToCart */,
@@ -114,6 +117,14 @@
 				F7D2BA6429D420E300044324 /* ProductListView.swift */,
 			);
 			path = ProductList;
+			sourceTree = "<group>";
+		};
+		F7D2BA6629D4250100044324 /* CartList */ = {
+			isa = PBXGroup;
+			children = (
+				F7D2BA6729D4252000044324 /* CartListView.swift */,
+			);
+			path = CartList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7D2BA6829D4252000044324 /* CartListView.swift in Sources */,
 				F7D2BA5729D3209100044324 /* AddToCartDomain.swift in Sources */,
 				F7D2BA5E29D3EA2300044324 /* ProductDomain.swift in Sources */,
 				F7D2BA2B29D3132A00044324 /* PlusMinusButton.swift in Sources */,
