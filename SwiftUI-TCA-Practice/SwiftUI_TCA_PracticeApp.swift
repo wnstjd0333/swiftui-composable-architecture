@@ -12,11 +12,11 @@ import ComposableArchitecture
 struct SwiftUI_TCA_PracticeApp: App {    
     var body: some Scene {
         WindowGroup {
-            PlusMinusButton(
+            ProductListView(
                 store: Store(
-                    initialState: AddToCartDomain.State(),
-                    reducer: AddToCartDomain.reducer,
-                    environment: AddToCartDomain.Environment()
+                    initialState: ProductListDomain.State(),
+                    reducer: ProductListDomain.reducer,
+                    environment: ProductListDomain.Environment(fetchProducts: { Product.sample })
                 )
             )
         }
