@@ -13,7 +13,7 @@ struct AddToCartButton: View {
     
     var body: some View {
         WithViewStore(self.store) { viewStore in
-            if viewStore.counter > 0 {
+            if viewStore.count > 0 {
                 PlusMinusButton(store: self.store)
             } else {
                 Button {

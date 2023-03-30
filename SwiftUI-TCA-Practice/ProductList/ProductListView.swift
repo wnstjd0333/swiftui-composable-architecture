@@ -42,7 +42,22 @@ struct ProductListView: View {
                         send: ProductListDomain.Action.setCart(isPresented:)
                     )
                 ) {
-                    CartListView()
+                    CartListView(
+                        store: Store(
+                            initialState: CartListDomain.State(
+                                cartItems: IdentifiedArrayOf(
+                                    uniqueElements: CartItem.sample
+                                        .map {
+                                            CartItemDomain.State(
+                                                id: UUID(),
+                                                cartItem: $0
+                                            )
+                                        }
+                                )
+                            ),
+                            reducer: CartListDomain.reducer,
+                            environment: CartListDomain.Environment())
+                    )
                 }
             }
         }
