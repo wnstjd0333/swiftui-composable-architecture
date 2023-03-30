@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F78F52A629D469A50086B998 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78F52A529D469A50086B998 /* CartItem.swift */; };
+		F78F52A829D469F40086B998 /* CartItemDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78F52A729D469F40086B998 /* CartItemDomain.swift */; };
+		F78F52AC29D46CDB0086B998 /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78F52AB29D46CDB0086B998 /* CartCell.swift */; };
+		F78F52AE29D4738E0086B998 /* CartListDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78F52AD29D4738E0086B998 /* CartListDomain.swift */; };
 		F7D2BA2929D3132A00044324 /* SwiftUI_TCA_PracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D2BA2829D3132A00044324 /* SwiftUI_TCA_PracticeApp.swift */; };
 		F7D2BA2B29D3132A00044324 /* PlusMinusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D2BA2A29D3132A00044324 /* PlusMinusButton.swift */; };
 		F7D2BA2D29D3132B00044324 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7D2BA2C29D3132B00044324 /* Assets.xcassets */; };
@@ -23,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F78F52A529D469A50086B998 /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
+		F78F52A729D469F40086B998 /* CartItemDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemDomain.swift; sourceTree = "<group>"; };
+		F78F52AB29D46CDB0086B998 /* CartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
+		F78F52AD29D4738E0086B998 /* CartListDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListDomain.swift; sourceTree = "<group>"; };
 		F7D2BA2529D3132A00044324 /* SwiftUI-TCA-Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-TCA-Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D2BA2829D3132A00044324 /* SwiftUI_TCA_PracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_TCA_PracticeApp.swift; sourceTree = "<group>"; };
 		F7D2BA2A29D3132A00044324 /* PlusMinusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusMinusButton.swift; sourceTree = "<group>"; };
@@ -51,6 +59,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F78F52A429D469880086B998 /* CartItem */ = {
+			isa = PBXGroup;
+			children = (
+				F78F52A529D469A50086B998 /* CartItem.swift */,
+				F78F52A729D469F40086B998 /* CartItemDomain.swift */,
+				F78F52AB29D46CDB0086B998 /* CartCell.swift */,
+			);
+			path = CartItem;
+			sourceTree = "<group>";
+		};
 		F7D2BA1C29D3132A00044324 = {
 			isa = PBXGroup;
 			children = (
@@ -122,7 +140,9 @@
 		F7D2BA6629D4250100044324 /* CartList */ = {
 			isa = PBXGroup;
 			children = (
+				F78F52A429D469880086B998 /* CartItem */,
 				F7D2BA6729D4252000044324 /* CartListView.swift */,
+				F78F52AD29D4738E0086B998 /* CartListDomain.swift */,
 			);
 			path = CartList;
 			sourceTree = "<group>";
@@ -204,12 +224,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7D2BA6829D4252000044324 /* CartListView.swift in Sources */,
+				F78F52AE29D4738E0086B998 /* CartListDomain.swift in Sources */,
+				F78F52AC29D46CDB0086B998 /* CartCell.swift in Sources */,
 				F7D2BA5729D3209100044324 /* AddToCartDomain.swift in Sources */,
+				F78F52A629D469A50086B998 /* CartItem.swift in Sources */,
 				F7D2BA5E29D3EA2300044324 /* ProductDomain.swift in Sources */,
 				F7D2BA2B29D3132A00044324 /* PlusMinusButton.swift in Sources */,
 				F7D2BA5C29D3E1C100044324 /* Product.swift in Sources */,
 				F7D2BA5929D3233900044324 /* AddToCartButton.swift in Sources */,
 				F7D2BA6029D3F68900044324 /* ProductCell.swift in Sources */,
+				F78F52A829D469F40086B998 /* CartItemDomain.swift in Sources */,
 				F7D2BA6529D420E300044324 /* ProductListView.swift in Sources */,
 				F7D2BA2929D3132A00044324 /* SwiftUI_TCA_PracticeApp.swift in Sources */,
 				F7D2BA6329D4180A00044324 /* ProductListDomain.swift in Sources */,
