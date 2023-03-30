@@ -20,6 +20,7 @@ struct ProductListDomain {
         case fetchProductResponse(TaskResult<[Product]>)
         case product(id: ProductDomain.State.ID, action: ProductDomain.Action)
         case setCart(isPresented: Bool)
+        case cart(CartListDomain.Action)
     }
     
     struct Environment {
@@ -32,6 +33,12 @@ struct ProductListDomain {
                 state: \.productList,
                 action: /Action.product(id:action:),
                 environment: { _ in ProductDomain.Environment() }
+            ),
+            CartListDomain.reducer
+                .pullback(
+                state: \.cartState,
+                action: /Action.cart,
+                environment: { _ in CartListDomain.Environment() }
             ),
             .init { state, action, environment in
                 switch action {
@@ -56,6 +63,12 @@ struct ProductListDomain {
                     print("Unable to fetch products")
                     return .none
                 case .product:
+                    return .none
+                case .cart(let action):
+                    switch action {
+                    case .didPressCloseButton:
+                        state.shouldOpenCart = false
+                    }
                     return .none
                 case .setCart(let isPresented):
                     state.shouldOpenCart = isPresented
