@@ -13,6 +13,11 @@ struct ProductDomain {
         let id: UUID
         let product: Product
         var addToCartState = AddToCartDomain.State()
+        
+        var count: Int {
+            get { addToCartState.count }
+            set { addToCartState.count = newValue}
+        }
     }
 
     enum Action: Equatable {
@@ -38,7 +43,7 @@ struct ProductDomain {
                 case .addToCart(.didTapPlusButton):
                     return .none
                 case .addToCart(.didTapMinusButton):
-                    state.addToCartState.counter = max(0, state.addToCartState.counter)
+                    state.addToCartState.count = max(0, state.addToCartState.count)
                     return .none
                 }
             }

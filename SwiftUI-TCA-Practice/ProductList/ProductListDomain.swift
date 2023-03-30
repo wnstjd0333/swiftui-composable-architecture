@@ -11,6 +11,7 @@ import ComposableArchitecture
 struct ProductListDomain {
     struct State: Equatable {
         var productList: IdentifiedArrayOf<ProductDomain.State> = []
+        var cartState = CartListDomain.State()
         var shouldOpenCart = false
     }
     
@@ -58,6 +59,19 @@ struct ProductListDomain {
                     return .none
                 case .setCart(let isPresented):
                     state.shouldOpenCart = isPresented
+                    state.cartState.cartItems = IdentifiedArray(
+                        uniqueElements: state.productList.compactMap { state in
+                            state.addToCartState.count > 0
+                            ? CartItemDomain.State(
+                                id: UUID(),
+                                cartItem: CartItem(
+                                    product: state.product,
+                                    quantity: state.addToCartState.count
+                                )
+                            )
+                            : nil
+                        }
+                    )
                     return .none
                 }
             }

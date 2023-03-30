@@ -25,7 +25,7 @@ struct PlusMinusButton: View {
                 }
                 .buttonStyle(.plain)
                 
-                Text(viewStore.counter.description)
+                Text(viewStore.count.description)
                     .padding(5)
                 
                 Button {
