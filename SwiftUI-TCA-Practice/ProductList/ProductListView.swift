@@ -43,20 +43,10 @@ struct ProductListView: View {
                     )
                 ) {
                     CartListView(
-                        store: Store(
-                            initialState: CartListDomain.State(
-                                cartItems: IdentifiedArrayOf(
-                                    uniqueElements: CartItem.sample
-                                        .map {
-                                            CartItemDomain.State(
-                                                id: UUID(),
-                                                cartItem: $0
-                                            )
-                                        }
-                                )
-                            ),
-                            reducer: CartListDomain.reducer,
-                            environment: CartListDomain.Environment())
+                        store: self.store.scope(
+                            state: \.cartState,
+                            action: ProductListDomain.Action.cart
+                        )
                     )
                 }
             }
